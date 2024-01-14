@@ -12,7 +12,7 @@ To compute the nth term of the modified Fibonacci sequence, simply call the fib(
 
 ```js
 const result = fib(4); // Returns 10
-``
+```
 Important is that we do not calculate the amount of pairs we have like in the original sequence, but we calculate how much the result in individual elements we have (total count not total pairs).
 
 - Contributions
