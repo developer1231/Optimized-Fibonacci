@@ -1,8 +1,6 @@
-function fib(n, memoziation = {}) {
-  if (n == 0) return 0; 
-  if (n == 1) return 1;  
-  if (memoziation[n] != undefined) return memoziation[n];
-  let result = fib(n - 1, memoziation) + fib(n - 2, memoziation);
-  memoziation[n] = result;
-  return result;
+function fib(n) {
+  const sqrt5 = Math.sqrt(5);
+  const phi = (1 + sqrt5) / 2;
+  const psi = (1 - sqrt5) / 2;
+  return Math.round((Math.pow(phi, n) - Math.pow(psi, n)) / sqrt5);
 }
