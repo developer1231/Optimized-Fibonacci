@@ -1,9 +1,8 @@
-let array = []
-function fib (n)
-{
-if(n == 0 || n == 1) return 2;
-if(array[n] != undefined) return array[n];
-let result =  fib (n-1) + fib(n-2)
-array[n] = result
-return array[n];
+function fib(n, memoziation = {}) {
+  if (n == 0) return 0; 
+  if (n == 1) return 1;  
+  if (memoziation[n] != undefined) return memoziation[n];
+  let result = fib(n - 1, memoziation) + fib(n - 2, memoziation);
+  memoziation[n] = result;
+  return result;
 }
